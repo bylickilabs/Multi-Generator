@@ -5,8 +5,8 @@
 ![1](https://user-images.githubusercontent.com/109308073/201518778-ead5eedd-1f91-4b93-892d-ec8bd4f66651.jpg)
 ![2](https://user-images.githubusercontent.com/109308073/201518784-a99d039d-cec5-4cbd-a139-9e986b4fee08.jpg)
 ---
-|▼ Password Generator ▼|
-|---|
+|▼ Password Generator ▼| Save Function|
+|---|---|
 ![3](https://user-images.githubusercontent.com/109308073/201518788-a7ac7968-5200-4082-889b-a7bf414dfa42.jpg)
 ![4](https://user-images.githubusercontent.com/109308073/201518791-89a26773-1ad5-42ce-9210-8457714564ad.jpg)
 ---
