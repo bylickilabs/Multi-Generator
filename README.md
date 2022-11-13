@@ -1,4 +1,6 @@
 ### Multi-Generator
+### AVG Security Scan
+### Online Virus Check
 ---
  |▼ Create Secure Passwords & En-/Decrypt Private Messages ▼|
  |---|
