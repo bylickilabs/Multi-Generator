@@ -1,4 +1,4 @@
-|1.)Multi-Generator|2.)AVG Security Scan|3.)Online Virus Check|
+| 1.)Multi-Generator | 2.)AVG Security Scan | 3.)Online Virus Check |
 |---|---|---|
  |▼ Create Secure Passwords & En-/Decrypt Private Messages ▼|
  |---|
