@@ -22,7 +22,7 @@
 ![11](https://user-images.githubusercontent.com/109308073/201518808-6c552001-5e60-4a06-a632-905fc83caed4.jpg)
 ---
 |▼ AVG Security Scan ▼|
-|---|---|
+|---|
 ![12](https://user-images.githubusercontent.com/109308073/201518811-6ea0e407-46a9-4c34-9bf9-d882927219c6.jpg)
 ![13](https://user-images.githubusercontent.com/109308073/201518813-e4788d08-166c-49d8-a809-b6b180b8d93f.jpg)
 ---
