@@ -1,7 +1,7 @@
 |Multi-Generator |AVG Security Scan |Online Virus Check |
 |---|---|---|
 ---
-I.) |▼ Create Secure Passwords & En-/Decrypt Private Messages ▼|
+|▼ Create Secure Passwords & En-/Decrypt Private Messages ▼|
 |---|
 ![1](https://user-images.githubusercontent.com/109308073/201518778-ead5eedd-1f91-4b93-892d-ec8bd4f66651.jpg)
 ![2](https://user-images.githubusercontent.com/109308073/201518784-a99d039d-cec5-4cbd-a139-9e986b4fee08.jpg)
@@ -21,10 +21,10 @@ I.) |▼ Create Secure Passwords & En-/Decrypt Private Messages ▼|
 ![10](https://user-images.githubusercontent.com/109308073/201518804-c41c7dba-8877-4c21-a125-0753081cd774.jpg)
 ![11](https://user-images.githubusercontent.com/109308073/201518808-6c552001-5e60-4a06-a632-905fc83caed4.jpg)
 ---
-II.) |▼ AVG Security Scan ▼|
+|▼ AVG Security Scan ▼|
 |---|---|
 ![12](https://user-images.githubusercontent.com/109308073/201518811-6ea0e407-46a9-4c34-9bf9-d882927219c6.jpg)
 ![13](https://user-images.githubusercontent.com/109308073/201518813-e4788d08-166c-49d8-a809-b6b180b8d93f.jpg)
 ---
-III.) |Online Check [HERE](https://www.virustotal.com/gui/url/67164087cd85262d94241eb483c92bcfb87231850656fdef0e3e7c1a43026c01)|
+|Online Check [HERE](https://www.virustotal.com/gui/url/67164087cd85262d94241eb483c92bcfb87231850656fdef0e3e7c1a43026c01)|
 |---|
