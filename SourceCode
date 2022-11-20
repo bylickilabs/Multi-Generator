@@ -1,0 +1,475 @@
+@echo off
+Color C
+
+:Hauptmenu
+title Multi Generator / Bylickilabs / v1.0.4
+echo.
+echo ------------------------------------------------------------------------------------------------------------------------
+echo                                                             Hauptmenu
+echo ------------------------------------------------------------------------------------------------------------------------
+echo.
+echo                                 =================================================================
+echo.
+echo                                 [1] Info                              [6] Besucht mich auf Github 
+echo.
+echo                                 [2] Passwort Generator (Bank)        
+echo.
+echo                                 [3] Passwort Generator (simple)      
+echo.
+echo                                 [4] Passwort Generator (Multiple)     
+echo.
+echo                                 [5] En-Decrypter  
+echo.
+echo.
+echo.
+echo                                 [e] Exit            
+echo.
+set /P whm=Auswahl:
+If %whm%==1 (goto Info)
+If %whm%==2 (goto PWGenerator)
+If %whm%==3 (goto Pw)
+If %whm%==4 (goto begin)
+If %whm%==5 (goto verzeichnis)
+If %whm%==6 (start https://Github.com/bylickilabs & cls & goto Hauptmenu)
+If %whm%==e (exit)
+cls
+goto Hauptmenu
+
+
+:Verzeichnis
+cls
+title Bylicki Labs
+echo.
+echo ------------------------------------------------------------------------------------------------------------------------
+echo                                                      En-Decrypter Menu
+echo ------------------------------------------------------------------------------------------------------------------------
+echo.
+echo                                           ======================================
+echo.
+echo                                           [7] Encrypter (verschluesseln)                         
+echo.
+echo                                           [8] Decrypter (entschluesseln)
+echo.    
+echo.
+echo.
+echo                                           [y] Zum Hauptmenu
+echo.
+echo                                           [z] Anwendung Beenden            
+
+set /P whm=Auswahl:
+If %whm%==7 (goto e)
+If %whm%==8 (goto d)
+If %whm%==y (cls & goto Hauptmenu)
+If %whm%==z (exit)
+
+:e
+cls
+title Encrypter
+echo.
+setlocal  ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
+set savefile=on
+(set CHAR[a]=UDFM45) & (set CHAR[b]=H21DGF) & (set CHAR[c]=FDH56D) & (set CHAR[d]=FGS546) & (set CHAR[e]=JUK4JH)
+(set CHAR[f]=ERG54S) & (set CHAR[g]=T5H4FD) & (set CHAR[h]=RG641G) & (set CHAR[i]=RG4F4D) & (set CHAR[j]=RT56F6)
+(set CHAR[k]=VCBC3B) & (set CHAR[l]=F8G9GF) & (set CHAR[m]=FD4CJS) & (set CHAR[n]=G423FG) & (set CHAR[o]=F45GC2)
+(set CHAR[p]=TH5DF5) & (set CHAR[q]=CV4F6R) & (set CHAR[r]=XF64TS) & (set CHAR[s]=X78DGT) & (set CHAR[t]=TH74SJ)
+(set CHAR[u]=BCX6DF) & (set CHAR[v]=FG65SD) & (set CHAR[w]=4KL45D) & (set CHAR[x]=GFH3F2) & (set CHAR[y]=GH56GF)
+(set CHAR[z]=45T1FG) & (set CHAR[1]=D4G23D) & (set CHAR[2]=GB56FG) & (set CHAR[3]=SF45GF) & (set CHAR[4]=P4FF12)
+(set CHAR[5]=F6DFG1) & (set CHAR[6]=56FG4G) & (set CHAR[7]=USGFDG) & (set CHAR[8]=FKHFDG) & (set CHAR[9]=IFGJH6)
+(set CHAR[0]=87H8G7) & (set CHAR[@]=G25GHF) & (set CHAR[#]=45FGFH) & (set CHAR[$]=75FG45) & (set CHAR[*]=54GDH5)
+(set CHAR[(]=45F465) & (set CHAR[.]=HG56FG) & (set CHAR[,]=DF56H4) & (set CHAR[-]=F5JHFH) & (set CHAR[ ]=SGF4HF)
+(set CHAR[\]=45GH45) & (set CHAR[/]=56H45G)
+echo.
+echo Eingabe der Daten die kodiert werden sollen:
+echo.
+set /p Encrypt=
+
+cls
+set Encrypt2=%Encrypt%
+set "EncryptOut="
+:encrypt2
+set char=%Encrypt2:~0,1%
+set Encrypt2=%Encrypt2:~1%
+set EncryptOut=%EncryptOut%!CHAR[%char%]!
+if not "%Encrypt2%"=="" goto encrypt2
+echo Eingabe: %Encrypt%
+echo.
+echo Auswertung: %EncryptOut%
+set string=%EncryptOut%
+set temp_str=%string%
+set str_len=0
+:lengthloop
+if defined temp_str (
+set temp_str=%temp_str:~1%
+set /A str_len += 1
+goto lengthloop )
+echo.
+echo Datei erfolgreich Decrypted %str_len% Zeichen lang!
+echo.
+if "%savefile%"=="on" echo.%EncryptOut%>>%~d0%~p0Encrypted.txt
+echo.
+echo                                     ----------------------------------------------------------
+echo.                                                            Encrypter Menu
+echo                                     ----------------------------------------------------------
+echo.
+echo                                     (x) Zum Decrypter
+echo.
+echo                                     (y) Anwendung Beenden
+echo.
+echo                                     (z) Zurueck zum Hauptmenu
+echo.
+echo.
+set /P PWaw=Auswahl:
+echo.
+echo.
+If %PWaw%==x (goto d)
+If %PWaw%==y (exit)
+If %PWaw%==z (cls & goto Hauptmenu)
+
+:d
+cls
+title Decrypter
+echo.
+echo                                             8                                     o
+echo                                             8                                     8
+echo                                        .oPYo8 .oPYo. .oPYo. oPYo. o    o .oPYo.  o8P
+echo                                        8    8 8oooo8 8    ' 8  `' 8    8 8    8   8
+echo                                        8    8 8.     8    . 8     8    8 8    8   8
+echo                                        `YooP' `Yooo' `YooP' 8     `YooP8 8YooP'   8
+echo                                      :::.....::.....::.....:..:::::....8 8 ....:::..:::
+echo                                      :::::::::::::::::::::::::::::::ooP'.8 ::::::::::::
+echo                                      :::::::::::::::::::::::::::::::...::..::::::::::::
+echo.
+setlocal  ENABLEEXTENSIONS ENABLEDELAYEDEXPANSION
+set savefile=on
+(set CHAR[uDFM45]=a) & (set CHAR[H21DGF]=b) & (set CHAR[FDH56D]=c) & (set CHAR[FGS546]=d) & (set CHAR[JUK4JH]=e)
+(set CHAR[ERG54S]=f) & (set CHAR[T5H4FD]=g) & (set CHAR[RG641G]=h) & (set CHAR[RG4F4D]=i) & (set CHAR[RT56F6]=j)
+(set CHAR[VCBC3B]=k) & (set CHAR[F8G9GF]=l) & (set CHAR[FD4CJS]=m) & (set CHAR[G423FG]=n) & (set CHAR[F45GC2]=o)
+(set CHAR[TH5DF5]=p) & (set CHAR[CV4F6R]=q) & (set CHAR[XF64TS]=r) & (set CHAR[X78DGT]=s) & (set CHAR[TH74SJ]=t)
+(set CHAR[bCX6DF]=u) & (set CHAR[FG65SD]=v) & (set CHAR[4KL45D]=w) & (set CHAR[GFH3F2]=x) & (set CHAR[GH56GF]=y)
+(set CHAR[45T1FG]=z) & (set CHAR[D4G23D]=1) & (set CHAR[GB56FG]=2) & (set CHAR[sF45GF]=3) & (set CHAR[P4FF12]=4)
+(set CHAR[F6DFG1]=5) & (set CHAR[56FG4G]=6) & (set CHAR[uSGFDG]=7) & (set CHAR[FKHFDG]=8) & (set CHAR[iFGJH6]=9)
+(set CHAR[87H8G7]=0) & (set CHAR[G25GHF]=@) & (set CHAR[45FGFH]=#) & (set CHAR[75FG45]=$) & (set CHAR[54GDH5]=*)
+(set CHAR[45F465]=() & (set CHAR[HG56FG]=.) & (set CHAR[DF56H4]=,) & (set CHAR[F5JHFH]=-) & (set CHAR[sGF4HF]= )
+(set CHAR[45GH45]=\) & (set CHAR[56H45G]=/)
+echo.
+echo Eingabe der Daten die Dekodiert werden sollen:
+echo.
+set /p Decrypt=
+cls
+set Decrypt2=%Decrypt%
+set "DecryptOut="
+:decrypt2
+set char=%Decrypt2:~0,6%
+set Decrypt2=%Decrypt2:~6%
+set DecryptOut=%DecryptOut%!CHAR[%char%]!
+if not "%Decrypt2%"=="" goto decrypt2
+echo.
+echo Eingabe: %Decrypt%
+echo                                           8                                     o   o
+echo                                           8                                     8
+echo                                      .oPYo8 .oPYo. .oPYo. oPYo. o    o .oPYo.  o8P o8 odYo. .oPYo.
+echo                                      8    8 8oooo8 8    ' 8  `' 8    8 8    8   8   8 8' `8 8    8
+echo                                      8    8 8.     8    . 8     8    8 8    8   8   8 8   8 8    8
+echo                                      `YooP' `Yooo' `YooP' 8     `YooP8 8YooP'   8   8 8   8 `YooP8
+echo                                      :.....::.....::.....:..:::::....8 8 ....:::..::....::..:....8
+echo                                      :::::::::::::::::::::::::::::ooP'.8 :::::::::::::::::::::ooP'.
+echo                                      :::::::::::::::::::::::::::::...::..:::::::::::::::::::::...::
+echo.
+
+cls
+echo.
+echo Auswertung: %DecryptOut%
+set string=%DecryptOut%
+set temp_str=%string%
+set str_len=0
+:lengthloop
+if defined temp_str (
+set temp_str=%temp_str:~1%
+set /A str_len += 1
+goto lengthloop )
+echo.
+echo Datei erfolgreich DeKodiert %str_len% Zeichen lang!
+if "%savefile%"=="on" echo.%DecryptOut%>>%~d0%~p0Decrypt.txt
+echo.
+echo                                     ----------------------------------------------------------
+echo.                                                           Decrypter Menu
+echo                                     ----------------------------------------------------------
+echo.
+echo                                     (x) Zum Encrypter
+echo.
+echo                                     (y) Anwendung Beenden
+echo.
+echo                                     (z) Zurueck zum Hauptmenu
+echo.
+set /P PWaw=Auswahl:
+echo.
+echo.
+If %PWaw%==x (goto e)
+If %PWaw%==y (exit)
+If %PWaw%==z (cls & goto Hauptmenu)
+
+
+:Pw
+cls
+echo.
+@echo off &setlocal enabledelayedexpansion
+set "pwd="
+set /a "n = 0"
+
+set /p "n=Wie viele Zeichen soll ihr Passwort haben? "
+echo.
+
+set /a "n = !n!" 2>nul
+for /l %%i in (1 1 !n!) do (
+  set /a "x = !random! %% 94 + 33"
+  cmd /c exit /b !x!
+  set "pwd=!pwd!!=ExitCodeAscii!"
+)
+
+>"passwort.txt" echo(!pwd!
+start "" notepad "Passwort.txt"
+echo.
+echo                                     ----------------------------------------------------------
+echo.
+echo                                     (e) Anwendung Beenden
+echo.
+echo                                     (r) Zurueck zum Hauptmenu
+set /P PWaw=Auswahl:
+echo.
+echo.
+If %PWaw%==e (exit)
+If %PWaw%==r (cls & goto Hauptmenu)
+goto Hauptmenu
+
+
+:begin
+cls
+echo.
+set pw=
+set /P th=Wie viele Zeichen soll ihr Passwort haben?:
+echo.
+set /A dt=0
+:1
+set /A dt=%dt%+1
+set /A gdp=%random% %%53
+if %gdp%==0 (set pw=%pw%`)
+if %gdp%==1 (set pw=%pw%q)
+if %gdp%==2 (set pw=%pw%w)
+if %gdp%==3 (set pw=%pw%e)
+if %gdp%==4 (set pw=%pw%r)
+if %gdp%==5 (set pw=%pw%t)
+if %gdp%==6 (set pw=%pw%z)
+if %gdp%==7 (set pw=%pw%u)
+if %gdp%==8 (set pw=%pw%i)
+if %gdp%==9 (set pw=%pw%o)
+if %gdp%==10 (set pw=%pw%p)
+if %gdp%==11 (set pw=%pw%a)
+if %gdp%==12 (set pw=%pw%s)
+if %gdp%==13 (set pw=%pw%d)
+if %gdp%==14 (set pw=%pw%f)
+if %gdp%==15 (set pw=%pw%g)
+if %gdp%==16 (set pw=%pw%h)
+if %gdp%==17 (set pw=%pw%j)
+if %gdp%==18 (set pw=%pw%k)
+if %gdp%==19 (set pw=%pw%l)
+if %gdp%==20 (set pw=%pw%y)
+if %gdp%==21 (set pw=%pw%x)
+if %gdp%==22 (set pw=%pw%c)
+if %gdp%==23 (set pw=%pw%v)
+if %gdp%==24 (set pw=%pw%b)
+if %gdp%==25 (set pw=%pw%n)
+if %gdp%==26 (set pw=%pw%m)
+if %gdp%==27 (set pw=%pw%0)
+if %gdp%==28 (set pw=%pw%1)
+if %gdp%==29 (set pw=%pw%2)
+if %gdp%==30 (set pw=%pw%3)
+if %gdp%==31 (set pw=%pw%4)
+if %gdp%==32 (set pw=%pw%5)
+if %gdp%==33 (set pw=%pw%6)
+if %gdp%==34 (set pw=%pw%7)
+if %gdp%==35 (set pw=%pw%8)
+if %gdp%==36 (set pw=%pw%9)
+if %gdp%==37 (set pw=%pw%})
+if %gdp%==38 (set pw=%pw%;)
+if %gdp%==39 (set pw=%pw%,)
+if %gdp%==40 (set pw=%pw%.)
+if %gdp%==41 (set pw=%pw%-)
+if %gdp%==42 (set pw=%pw%_)
+if %gdp%==43 (set pw=%pw%+)
+if %gdp%==44 (set pw=%pw%~)
+if %gdp%==45 (set pw=%pw%#)
+if %gdp%==46 (set pw=%pw%')
+if %gdp%==47 (set pw=%pw%@)
+if %gdp%==48 (set pw=%pw%?)
+if %gdp%==49 (set pw=%pw%$)
+if %gdp%==50 (set pw=%pw%[)
+if %gdp%==51 (set pw=%pw%])
+if %gdp%==52 (set pw=%pw%{)
+if %dt% lss %th% (goto 1)
+echo %pw%
+echo.
+set /P yn=Passwort Speichern? J\N :
+if %yn%==J (
+echo %pw% > Passwort.txt
+echo.
+echo Passwort wurde gespeichert)
+if %yn%==j (
+echo %pw% > Passwort.txt
+echo.
+echo Passwort wurde gespeichert)
+if %yn%==y (
+echo %pw% > Passwort.txt
+echo.
+echo Passwort wurde gespeichert)
+if %yn%==Y (
+echo %pw% > Passwort.txt
+echo.
+echo Passwort wurde gespeichert)
+if %yn%==N (
+echo.
+echo Passwort wurde nicht gespeichert)
+if %yn%==n (
+echo.
+echo Passwort wurde nicht gespeichert)
+echo.
+echo.
+echo                                     ----------------------------------------------------------
+echo.
+echo                                     (e) Anwendung Beenden
+echo.
+echo                                     (r) Zurueck zum Hauptmenu
+set /P PWaw=Auswahl:
+echo.
+echo.
+If %PWaw%==e (exit)
+If %PWaw%==r (cls & goto Hauptmenu)
+
+
+
+:Info
+cls
+title Programm Info
+echo.
+echo                                           _____________________________________________
+echo.
+echo                                                  ** Informationen zu Programm **                                                                          
+echo.                                          
+echo                                           Copyright:       Bylickilabs        
+echo.                                          
+echo                                           Version:         1.0.4              
+echo.
+echo                                           Erstellungdatum: Sonntag 13.11.2022
+echo.
+echo                                           Beschreibung:    (1)Passwort Generator
+echo                                                            (2)Encypt/Decrypt
+echo                                           _____________________________________________
+echo.
+echo                                     ---------------------------------------------------------
+echo.
+echo                                     (e) Anwendung Beenden
+echo.
+echo                                     (r) Zurueck zum Hauptmenu
+set /P PWaw=Auswahl:
+echo.
+echo.
+If %PWaw%==e (exit)
+If %PWaw%==r (cls & goto Hauptmenu)
+
+
+
+:PWGenerator
+cls
+title Passwort Generator
+echo.
+echo **Auswahlmenu**
+echo                                     Generieren von:
+echo.
+echo                                     ---------------------------------------------------------------
+echo.                                    NR. Art                    Laenge          Zeichenfolge
+echo                                     ---------------------------------------------------------------
+echo.
+echo                                     (1) PIN                    4 Stellig       nur Zahlen
+echo.
+echo                                     (2) Internet Passwort1     6 Stellig       Zahlen u. Buchstaben
+echo.
+echo                                     (3) Internet Passwort2     7 Stellig       Zahlen u. Buchstaben
+echo.
+echo                                     (4) Internet Passwort3     8 Stellig       Zahlen u. Buchstaben
+echo.
+echo                                     (5) Internet Passwort4     10 Stellig      Zahlen u. Buchstaben
+echo.
+echo                                     (6) Server Passwort1       12 Stellig      Zahlen u. Buchstaben
+echo.
+echo                                     (7) Server Passwort2       16 Stellig      Zahlen u. Buchstaben
+echo.
+echo                                     ---------------------------------------------------------------
+echo.
+echo                                     (e) Anwendung Beenden
+echo.
+echo                                     (r) Zurueck zum Hauptmenu
+echo.
+set /P PWaw=Auswahl:
+echo.
+If %PWaw%==1 (echo Wie viele PINS wollen sie Generieren? & set /p counter=& echo. & echo Generierte PINs: & echo. & set Zähler= 0 & goto GenPINs)
+If %PWaw%==2 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Passwoerter: & echo. & set Zähler= 0 & set "laenge=6" & goto generate)
+If %PWaw%==3 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Passwoerter: & echo. & set Zähler= 0 & set "laenge=7" & goto generate)
+If %PWaw%==4 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Passwoerter: & echo. & set Zähler= 0 & set "laenge=8" & goto generate)
+If %PWaw%==5 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Passwoerter: & echo. & set Zähler= 0 & set "laenge=10" & goto generate)
+If %PWaw%==6 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Server Passwoerter: & echo. & set Zähler= 0 & set "laenge=12" & goto generate)
+If %PWaw%==7 (echo Wie viele Passwoerter wollen sie Generieren? & set /p counter= & echo. & echo Generierte Server Passwoerter: & echo. & set Zähler= 0 & set "laenge=16" & goto generate)
+echo.
+echo.
+If %PWaw%==e (exit)
+If %PWaw%==r (cls & goto Hauptmenu)
+cls
+goto PWGenerator
+goto PIN
+
+
+
+:GenPINs
+title PIN Generator (4-Stellig)
+setlocal enabledelayedexpansion
+for /l %%i in (1,1,%counter%) do (
+  (for /l %%j in (1,1,4) do (set /a "zz%%j=!random! %% 10" & <NUL set /p "=!zz%%j!")) & echo.
+)
+endlocal
+echo. & Pause & cls & goto PWGenerator
+
+
+
+:generate
+title Passwort Generator(%laenge% Stellig)
+call :GenPWsAlNum %counter% %laenge%
+exit /b
+
+
+
+:GenPWsAlNum
+  setlocal enabledelayedexpansion
+  title Passwort Generator (%2-stellig)
+  set "Alphabet=a b c d e f g h i j k l m n o p q r s t u v w x y z"
+  for /l %%i in (1,1,%1) do (
+    (for /l %%j in (1,1,%2) do (
+       set /a "cipher=!random! %% 36"
+       if !cipher! leq 9 (
+         <NUL set /p "=!cipher!"
+       ) else (
+         set /a "cipher-=9"
+         call :PrintArrayItem !cipher!
+       )
+    )) & echo.
+  )
+  endlocal
+pause
+set counter=0
+echo.
+echo.
+goto PWGenerator
+exit /b
+
+
+
+:PrintArrayItem
+  for /f "tokens=%1" %%c in ("%Alphabet%") do <NUL set /p "=%%c"
+  exit /b
